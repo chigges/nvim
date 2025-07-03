@@ -1,12 +1,10 @@
-vim.cmd("colorscheme tokyonight")
-
 vim.opt.number = true
 vim.opt.relativenumber = true
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
-vim.opt.expandtab = false
+vim.opt.expandtab = true
 
 vim.opt.smartindent = true
 
@@ -37,6 +35,41 @@ vim.opt.showcmd = true
 vim.opt.ruler = true
 
 vim.opt.confirm = true
+
+vim.api.nvim_create_autocmd("TextYankPost", {
+	callback = function()
+		vim.highlight.on_yank()
+	end,
+})
+
+-- ignore the "default" vim colorschemes when tab completing
+--vim.cmd([[set wildignore+=blue.vim,darkblue.vim,delek.vim,desert.vim,elflord.vim,evening.vim,industry.vim,koehler.vim,lunaperche.vim,morning.vim,murphy.vim,pablo.vim,peachpuff.vim,quiet.vim,retrobox.vim,ron.vim,shine.vim,slate.vim,sorbet.vim,torte.vim,wildcharm.vim,zaibatsu.vim,zellner.vim]])
+vim.opt.wildignore:append({
+  "blue.vim",
+  "darkblue.vim",
+  "delek.vim",
+  "desert.vim",
+  "elflord.vim",
+  "evening.vim",
+  "industry.vim",
+  "habamax.vim",
+  "koehler.vim",
+  "lunaperche.vim",
+  "morning.vim",
+  "murphy.vim",
+  "pablo.vim",
+  "peachpuff.vim",
+  "quiet.vim",
+  "ron.vim",
+  "shine.vim",
+  "slate.vim",
+  "sorbet.vim",
+  "retrobox.vim",
+  "torte.vim",
+  "wildcharm.vim",
+  "zaibatsu.vim",
+  "zellner.vim",
+})
 
 vim.api.nvim_create_user_command(
 	"Newc",

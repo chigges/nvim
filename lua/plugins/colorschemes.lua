@@ -1,61 +1,68 @@
 return {
-	{ "ellisonleao/gruvbox.nvim" },
+    {
+        "nyoom-engineering/nyoom.nvim"
+    },
+    {
+        "bluz71/vim-moonfly-colors"
+    },
+    {
+        "savq/melange-nvim"
+    },
+    {
+        "Shatur/neovim-ayu"
+    },
+    {
+        "kepano/flexoki"
+    },
+    {
+        "haystackandroid/carbonized"
+    },
+    {
+        "jdsimcoe/abstract.vim"
+    },
 	{
-		"catppuccin/nvim",
-		name = "catppuccin",
-		opts = {
-			integrations = {
-				aerial = true,
-				alpha = true,
-				cmp = true,
-				dashboard = true,
-				flash = true,
-				gitsigns = true,
-				headlines = true,
-				illuminate = true,
-				indent_blankline = { enabled = true },
-				leap = true,
-				lsp_trouble = true,
-				mason = true,
-				markdown = true,
-				mini = true,
-				native_lsp = {
-					enabled = true,
-					underlines = {
-						errors = { "undercurl" },
-						hints = { "undercurl" },
-						warnings = { "undercurl" },
-						information = { "undercurl" },
-					},
-				},
-				navic = { enabled = true, custom_bg = "lualine" },
-				neotest = true,
-				neotree = true,
-				noice = true,
-				notify = true,
-				semantic_tokens = true,
-				telescope = true,
-				treesitter = true,
-				treesitter_context = true,
-				which_key = true,
-			},
-		},
-	},
-	{ "shaunsingh/nord.nvim" },
-	{ "marko-cerovac/material.nvim" },
-	{ "shaunsingh/seoul256.nvim" },
-	{ "shaunsingh/nord.nvim" },
-	{ "rose-pine/neovim" },
-	{ "sainnhe/sonokai" },
-	{ "sainnhe/edge" },
-	{ "sainnhe/gruvbox-material" },
-	{ "sainnhe/everforest", priority = 1000 },
-	{ "askfiy/visual_studio_code" },
-	{ "uloco/bluloco.nvim", dependencies = { "rktjmp/lush.nvim" } },
-	{ "lunarvim/Onedarker.nvim" },
+        "Mofiqul/vscode.nvim",
+    },
+    {
+        "sho-87/kanagawa-paper.nvim",
+    },
+    {
+        "AlexvZyl/nordic.nvim",
+    },
+    {
+        "slugbyte/lackluster.nvim",
+    },
 	{
 		"folke/tokyonight.nvim",
 		opts = { style = "moon" },
 	},
-	{ "rebelot/kanagawa.nvim" },
+	{
+        "marko-cerovac/material.nvim",
+    },
+	{
+        "rose-pine/neovim",
+    },
+	{
+        "sainnhe/gruvbox-material",
+        lazy = false,
+        priority = 1000,
+        init = function ()
+            vim.cmd("colorscheme gruvbox-material")
+        end,
+    },
+	{
+        "sainnhe/everforest",
+    },
+	{
+        "rebelot/kanagawa.nvim",
+    },
+    {
+        "neanias/everforest-nvim",
+        version = false,
+        config = function()
+            require("everforest").setup({
+                background = "soft"
+            })
+        end,
+    },
 }

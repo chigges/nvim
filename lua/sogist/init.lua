@@ -1,8 +1,10 @@
-vim.opt.termguicolors = true -- for nvim-colorizer (example: #d2a23e)
+vim.deprecate = function() end --TODO: Remove this
 
-require("sogist.lazy")
+-- Set personal vim settings
+require("sogist.remap") -- This must come before lazy because it defines leader key
 require("sogist.vim-settings")
 
+-- Set OS specific settings
 local has = vim.fn.has
 local is_mac = has("macunix")
 local is_linux = has("unix")
@@ -22,4 +24,10 @@ if is_wsl then
 	require("sogist.wsl")
 end
 
-print("Rip and tear until it is done.")
+-- Install Plugins with Lazy.nvim
+require("sogist.lazy")
+
+-- Print a nice message in the status line
+local a = { "Rip and tear", }
+local r = math.random(#a)
+print(a[r])

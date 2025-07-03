@@ -15,11 +15,6 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Make sure to setup `mapleader` and `maplocalleader` before
--- loading lazy.nvim so that mappings are correct.
--- This is also a good place to setup other settings (vim.opt)
-require("sogist.remap") -- This must come before lazy because it defines leader key
-
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {
@@ -33,4 +28,4 @@ require("lazy").setup({
   checker = { enabled = true },
 })
 
-vim.keymap.set("n", "<leader>l", ":Lazy<CR>", {})
+vim.keymap.set("n", "<leader>l", ":Lazy<CR>", { desc = "open Lazy menu"})
