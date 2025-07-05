@@ -26,7 +26,11 @@ end
 -- Install Plugins with Lazy.nvim
 require("config.lazy")
 
--- Print a nice message in the status line
-local welcome_messages = { "Rip and tear", }
-local random_index = math.random(#welcome_messages)
-print(welcome_messages[random_index])
+-- Some colorschemes can redraw after this print when loaded.
+-- Using the schedule wrapper ensures it will be written after the UI has settled.
+vim.schedule(function()
+    -- Print a nice message in the status line
+    local welcome_messages = { "Rip and tear", }
+    local random_index = math.random(#welcome_messages)
+    print(welcome_messages[random_index])
+end)

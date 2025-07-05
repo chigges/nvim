@@ -7,7 +7,14 @@ return {
     { "haystackandroid/carbonized" },
     { "jdsimcoe/abstract.vim" },
     { "Mofiqul/vscode.nvim", },
-    { "sho-87/kanagawa-paper.nvim", },
+    {
+        "sho-87/kanagawa-paper.nvim",
+        lazy = false,
+        priority = 1000,
+        config = function()
+            vim.cmd("colorscheme kanagawa-paper")
+        end
+    },
     { "AlexvZyl/nordic.nvim", },
     { "slugbyte/lackluster.nvim", },
     {
@@ -27,13 +34,6 @@ return {
             })
         end,
     },
-    {
-        "EdenEast/nightfox.nvim",
-        lazy = false,
-        priority = 1000,
-        init = function()
-            vim.cmd("colorscheme terafox")
-        end,
-    },
+    { "EdenEast/nightfox.nvim", },
     { "catppuccin/nvim" },
 }
