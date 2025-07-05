@@ -19,6 +19,7 @@ return {
             scroll    = { enabled = true },
         },
         keys = {
+            -- Picker
             { "<leader>ff", function() Snacks.picker.smart() end,            desc = "Smart find files" },
             { "<leader>fg", function() Snacks.picker.git_files() end,        desc = "find git files" },
             { "<leader>/",  function() Snacks.picker.grep() end,             desc = "grep" },
@@ -32,7 +33,7 @@ return {
             -- LSP
             { "gd",         function() Snacks.picker.lsp_definitions() end,  desc = "goto definition" },
             { "gD",         function() Snacks.picker.lsp_declarations() end, desc = "goto declaration" },
-
+            -- Git browse
             { "<leader>bg", function() Snacks.gitbrowse() end,               desc = "Browse Git" }
         },
     },

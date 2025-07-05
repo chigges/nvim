@@ -1,5 +1,5 @@
 return {
-    { "nvim-lua/plenary.nvim" }, -- telescope dependency, a library for neovim plugins
+    { "nvim-lua/plenary.nvim", lazy = true }, -- telescope dependency, a library for neovim plugins
     {
         "nvim-telescope/telescope.nvim",
         dependencies = {
