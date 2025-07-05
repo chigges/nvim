@@ -28,7 +28,7 @@ return {
             { "<leader>su", function() Snacks.picker.undo() end,             desc = "search undo history" },
             { "<leader>sh", function() Snacks.picker.help() end,             desc = "search help pages" },
             { "<leader>st", function() Snacks.picker.todo_comments() end,    desc = "search todo comments" },
-            { "<leader>CC", function() Snacks.picker.colorschemes() end,     desc = "colorschemes" },
+            { "<leader>cc", function() Snacks.picker.colorschemes() end,     desc = "colorschemes" },
             -- LSP
             { "gd",         function() Snacks.picker.lsp_definitions() end,  desc = "goto definition" },
             { "gD",         function() Snacks.picker.lsp_declarations() end, desc = "goto declaration" },
