@@ -1,12 +1,7 @@
 return {
     "neovim/nvim-lspconfig",
     dependencies = { 'saghen/blink.cmp' },
-
-    -- example using `opts` for defining servers
     opts = {
-        servers = {
-            lua_ls = {}
-        }
     },
     config = function()
         local capabilities = require('blink.cmp').get_lsp_capabilities()
@@ -16,6 +11,8 @@ return {
             callback = function(args)
                 local client = vim.lsp.get_client_by_id(args.data.client_id)
                 if not client then return end
+
+                vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "LSP Go to Definition" })
 
                 if client.supports_method('textDocument/formatting', 0) and vim.bo.filetype == "lua" then
                     -- Format current buffer on save
