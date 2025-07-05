@@ -40,3 +40,5 @@ remap("t", "<Esc>", "<C-\\><C-n><C-w>k", { noremap = true, silent = true, desc =
 remap("n", "<leader>0", ":tabe ~/.config/nvim/<cr>", { desc = "open nvim config" }) -- open init.lua
 
 remap("n", "<leader>d", vim.diagnostic.open_float, { desc = "open diagnostic" })
+remap("n", "<leader>rn", vim.lsp.buf.rename, { desc = "lsp rename" })
+remap("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "code actions" })
