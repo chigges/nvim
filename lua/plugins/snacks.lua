@@ -1,45 +1,38 @@
 return {
-    "folke/snacks.nvim",
-    priority = 1000,
-    lazy = false,
-    ---@type snacks.Config
-    opts = {
-        -- This plugin is a "best of" QoL plugins.
-        -- Not every plugin available is being used.
-        --
-        -- Activated plugins:
-        animate = { enabled = true },
-        bigfile = { enabled = true },
-        image = { enabled = true },
-        indent = { enabled = true },
-        input = { enabled = true },
-        picker = { enabled = true },
-        scroll = { enabled = true },
-
-        --[[
-            -- Set key binds
-            vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "find files" })
-            vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "find (live) grep" })
-            vim.keymap.set("v", "<leader>fg", builtin.grep_string, { desc = "find current selection" })
-            vim.keymap.set("n", "<leader>s", "<cmd>Telescope current_buffer_fuzzy_find<cr>",
-                { desc = "fuzzy find current buffer" })
-        ]]
-    },
-    keys = {
-        { "<leader>ff", function() Snacks.picker.smart() end,            desc = "Smart find files" },
-        { "<leader>fg", function() Snacks.picker.git_files() end,        desc = "find git files" },
-        { "<leader>/",  function() Snacks.picker.grep() end,             desc = "grep" },
-        { "<leader>gb", function() Snacks.picker.git_branches() end,     desc = "Git branches" },
-        { "<leader>sh", function() Snacks.picker.git_diff() end,         desc = "search git diff" },
-        { "<leader>sd", function() Snacks.picker.diagnostics() end,      desc = "search diagnostics" },
-        { "<leader>su", function() Snacks.picker.undo() end,             desc = "search undo history" },
-        { "<leader>sh", function() Snacks.picker.help() end,             desc = "search help pages" },
-        { "<leader>st", function() Snacks.picker.todo_comments() end,    desc = "search todo comments" },
-        { "<leader>CC", function() Snacks.picker.colorschemes() end,     desc = "colorschemes" },
-        -- LSP
-        { "gd",         function() Snacks.picker.lsp_definitions() end,  desc = "goto definition" },
-        { "gD",         function() Snacks.picker.lsp_declarations() end, desc = "goto declaration" },
-        { "gD",         function() Snacks.picker.lsp_references() end,   desc = "goto references" },
+    {
+        "folke/snacks.nvim",
+        priority = 1000,
+        lazy = false,
+        ---@type snacks.Config
+        opts = {
+            -- This plugin is a "best of" QoL plugins.
+            -- Not every plugin available is being used.
+            --
+            -- Activated plugins:
+            animate = { enabled = true },
+            bigfile = { enabled = true },
+            image = { enabled = true },
+            indent = { enabled = true },
+            input = { enabled = true },
+            picker = { enabled = true },
+            scroll = { enabled = true },
+        },
+        keys = {
+            { "<leader>ff", function() Snacks.picker.smart() end,            desc = "Smart find files" },
+            { "<leader>fg", function() Snacks.picker.git_files() end,        desc = "find git files" },
+            { "<leader>/",  function() Snacks.picker.grep() end,             desc = "grep" },
+            { "<leader>gb", function() Snacks.picker.git_branches() end,     desc = "Git branches" },
+            { "<leader>sh", function() Snacks.picker.git_diff() end,         desc = "search git diff" },
+            { "<leader>sd", function() Snacks.picker.diagnostics() end,      desc = "search diagnostics" },
+            { "<leader>su", function() Snacks.picker.undo() end,             desc = "search undo history" },
+            { "<leader>sh", function() Snacks.picker.help() end,             desc = "search help pages" },
+            { "<leader>st", function() Snacks.picker.todo_comments() end,    desc = "search todo comments" },
+            { "<leader>CC", function() Snacks.picker.colorschemes() end,     desc = "colorschemes" },
+            -- LSP
+            { "gd",         function() Snacks.picker.lsp_definitions() end,  desc = "goto definition" },
+            { "gD",         function() Snacks.picker.lsp_declarations() end, desc = "goto declaration" },
+            print()
+        },
     },
     {
         "folke/flash.nvim",

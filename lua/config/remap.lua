@@ -38,3 +38,5 @@ remap("n", "<leader>W", ":wa<cr>", { desc = "save all files" })
 remap("t", "<Esc>", "<C-\\><C-n><C-w>k", { noremap = true, silent = true, desc = "Exit terminal" })
 
 remap("n", "<leader>0", ":tabe ~/.config/nvim/<cr>", { desc = "open nvim config" }) -- open init.lua
+
+remap("n", "<leader>d", vim.diagnostic.open_float, { desc = "open diagnostic" })

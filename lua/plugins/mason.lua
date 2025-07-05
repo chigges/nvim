@@ -7,6 +7,6 @@ return {
     },
     config = function(_, opts)
         require("mason").setup(opts)
-        vim.keymap.set("n", "<leader>m", "<cmd>Mason<cr>", { desc = "Mason" })
+        vim.keymap.set("n", "<leader>ma", "<cmd>Mason<cr>", { desc = "Mason" })
     end,
 }

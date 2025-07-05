@@ -1,1 +1,1 @@
-require("config.init") -- my custom settings in the lua directory
+require("config") -- my custom settings in the lua directory
