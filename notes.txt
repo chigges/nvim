@@ -1,4 +1,0 @@
-sudo pacman -S rust-analyzer
-brew install rust-analyzer
-
-npm install -g typescript-language-server typescript pyright prettier @fsouza/prettierd
