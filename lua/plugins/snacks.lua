@@ -9,13 +9,14 @@ return {
             -- Not every plugin available is being used.
             --
             -- Activated plugins:
-            animate = { enabled = true },
-            bigfile = { enabled = true },
-            image = { enabled = true },
-            indent = { enabled = true },
-            input = { enabled = true },
-            picker = { enabled = true },
-            scroll = { enabled = true },
+            animate   = { enabled = true },
+            bigfile   = { enabled = true },
+            gitbrowse = { enabled = true },
+            image     = { enabled = true },
+            indent    = { enabled = true },
+            input     = { enabled = true },
+            picker    = { enabled = true },
+            scroll    = { enabled = true },
         },
         keys = {
             { "<leader>ff", function() Snacks.picker.smart() end,            desc = "Smart find files" },
@@ -31,7 +32,8 @@ return {
             -- LSP
             { "gd",         function() Snacks.picker.lsp_definitions() end,  desc = "goto definition" },
             { "gD",         function() Snacks.picker.lsp_declarations() end, desc = "goto declaration" },
-            print()
+
+            { "<leader>bg", function() Snacks.gitbrowse() end,               desc = "Browse Git" }
         },
     },
     {
