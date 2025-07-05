@@ -1,8 +1,6 @@
-vim.deprecate = function() end --TODO: Remove this
-
 -- Set personal vim settings
-require("sogist.remap") -- This must come before lazy because it defines leader key
-require("sogist.vim-settings")
+require("config.remap") -- This must come before lazy because it defines leader key
+require("config.vim-settings")
 
 -- Set OS specific settings
 local has      = vim.fn.has
@@ -11,21 +9,22 @@ local is_linux = has("unix")
 local is_win   = has("win32")
 local is_wsl   = has("wsl")
 
+-- These will set nvim to use the OS's clipboard
 if is_linux then
-    require("sogist.linux")
+    require("config.linux")
 end
 if is_mac then
-    require("sogist.macos")
+    require("config.macos")
 end
 if is_win then
-    require("sogist.windows")
+    require("config.windows")
 end
 if is_wsl then
-    require("sogist.wsl")
+    require("config.wsl")
 end
 
 -- Install Plugins with Lazy.nvim
-require("sogist.lazy")
+require("config.lazy")
 
 -- Print a nice message in the status line
 local welcome_messages = { "Rip and tear", }

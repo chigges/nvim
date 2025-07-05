@@ -10,7 +10,7 @@ vim.opt.smartindent = true
 
 vim.opt.wrap = false
 
-vim.opt.swapfile = false
+vim.opt.swapfile = false -- I don't like swapfiles
 vim.opt.backup = false
 
 vim.opt.incsearch = true
@@ -42,8 +42,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	end,
 })
 
--- ignore the "default" vim colorschemes when tab completing
---vim.cmd([[set wildignore+=blue.vim,darkblue.vim,delek.vim,desert.vim,elflord.vim,evening.vim,industry.vim,koehler.vim,lunaperche.vim,morning.vim,murphy.vim,pablo.vim,peachpuff.vim,quiet.vim,retrobox.vim,ron.vim,shine.vim,slate.vim,sorbet.vim,torte.vim,wildcharm.vim,zaibatsu.vim,zellner.vim]])
+-- ignore the default vim colorschemes when tab completing
 vim.opt.wildignore:append({
 	"blue.vim",
 	"darkblue.vim",

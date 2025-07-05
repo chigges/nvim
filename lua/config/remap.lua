@@ -13,7 +13,8 @@ remap("n", "<F8>", ":noh<cr>")  -- stop highlight search
 remap("n", "<F11>", "!make")    -- run first make rule/target
 
 
-remap("n", "<F12>", ":w<cr>:!gcc -o placeholder % -lm && ./placeholder && rm -f placeholder<CR>") -- run current C file (Does not work for multiple files)
+-- Hacky way to run a simple C file
+remap("n", "<F12>", ":w<cr>:!gcc -o placeholder % -lm && ./placeholder && rm -f placeholder<CR>")
 
 -- Quality of Life
 
