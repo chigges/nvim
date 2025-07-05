@@ -6,10 +6,11 @@ require("sogist.vim-settings")
 
 -- Set OS specific settings
 local has = vim.fn.has
-local is_mac = has("macunix")
+
+local is_mac   = has("macunix")
 local is_linux = has("unix")
-local is_win = has("win32")
-local is_wsl = has("wsl")
+local is_win   = has("win32")
+local is_wsl   = has("wsl")
 
 if is_linux then
 	require("sogist.linux")
@@ -28,6 +29,6 @@ end
 require("sogist.lazy")
 
 -- Print a nice message in the status line
-local a = { "Rip and tear", }
-local r = math.random(#a)
-print(a[r])
+local welcome_messages = { "Rip and tear", }
+local random_index = math.random(#welcome_messages)
+print(welcome_messages[random_index])

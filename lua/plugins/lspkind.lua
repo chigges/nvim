@@ -1,7 +1,7 @@
 return {
-	{
-		"onsails/lspkind.nvim",
-		config = function()
-		end,
-	},
+    {
+        "onsails/lspkind.nvim",
+        config = function()
+        end,
+    },
 }

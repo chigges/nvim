@@ -20,7 +20,7 @@ return {
     {
         "jdsimcoe/abstract.vim"
     },
-	{
+    {
         "Mofiqul/vscode.nvim",
     },
     {
@@ -32,28 +32,28 @@ return {
     {
         "slugbyte/lackluster.nvim",
     },
-	{
-		"folke/tokyonight.nvim",
-		opts = { style = "moon" },
-	},
-	{
+    {
+        "folke/tokyonight.nvim",
+        opts = { style = "moon" },
+    },
+    {
         "marko-cerovac/material.nvim",
     },
-	{
+    {
         "rose-pine/neovim",
     },
-	{
+    {
         "sainnhe/gruvbox-material",
         lazy = false,
         priority = 1000,
-        init = function ()
+        init = function()
             vim.cmd("colorscheme gruvbox-material")
         end,
     },
-	{
+    {
         "sainnhe/everforest",
     },
-	{
+    {
         "rebelot/kanagawa.nvim",
     },
     {

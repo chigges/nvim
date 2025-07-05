@@ -1,3 +1,3 @@
 return {
-	{ "neoclide/vim-jsx-improve" },
+    { "neoclide/vim-jsx-improve" },
 }
