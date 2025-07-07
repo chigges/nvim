@@ -17,6 +17,8 @@ You can tell if it installed correctly if it says a little message in the bottom
 
 I hope this serves you as a good config or at least gets you started on creating your own config.
 
+To install an LSP, use `:Mason`. Navigate to the LSP you want to install and press `i` over it to install it.
+
 # Brief explanation
 
 **/init.lua** - This is the file that is initially run when nvim opens. Make sure you require any directories in your **/lua** folder you want to have run their separate init.lua file.
