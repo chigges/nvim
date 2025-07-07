@@ -12,6 +12,8 @@ return {
             vim.api.nvim_set_hl(0, "IlluminatedWordWrite", visual_hl) -- Writes will be bold and underline
         end
 
+        set_illuminate_hl_groups()
+
         --- auto update the highlight style on colorscheme change
         vim.api.nvim_create_autocmd({ "ColorScheme" }, {
             pattern = { "*" },
