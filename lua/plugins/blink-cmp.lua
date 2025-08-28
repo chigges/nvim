@@ -23,6 +23,15 @@ return {
 
             sources = {
                 default = { 'lsp', 'path', 'snippets', 'buffer' },
+                providers = {
+                    lsp = {
+                        name = 'LSP',
+                        module = 'blink.cmp.sources.lsp',
+                        enabled = true,
+                        async = true,
+                        timeout_ms = 200,
+                    },
+                },
             },
 
             fuzzy = { implementation = "prefer_rust_with_warning" },

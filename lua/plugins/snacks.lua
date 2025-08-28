@@ -23,6 +23,8 @@ return {
             { "<leader>ff", function() Snacks.picker.smart() end,            desc = "Smart find files" },
             { "<leader>fg", function() Snacks.picker.git_files() end,        desc = "find git files" },
             { "<leader>/",  function() Snacks.picker.grep() end,             desc = "grep" },
+            { "<leader>/",  function() Snacks.picker.grep_word() end,        desc = "grep visual",         mode = { "v" } },
+            { "<leader>sw", function() Snacks.picker.grep_word() end,        desc = "grep search word",    mode = { "n", "v" } },
             { "<leader>gb", function() Snacks.picker.git_branches() end,     desc = "Git branches" },
             { "<leader>sh", function() Snacks.picker.git_diff() end,         desc = "search git diff" },
             { "<leader>sd", function() Snacks.picker.diagnostics() end,      desc = "search diagnostics" },
