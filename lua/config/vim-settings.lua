@@ -10,7 +10,9 @@ vim.opt.smartindent = true
 
 vim.opt.wrap = false
 
-vim.opt.swapfile = false -- I don't like swapfiles
+vim.opt.swapfile = true
+vim.opt.directory = vim.fn.stdpath('data') .. '/swap//'
+
 vim.opt.backup = false
 
 vim.opt.incsearch = true
