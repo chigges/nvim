@@ -1,1 +1,6 @@
-swap/
+# Ignore all swap files
+*.swp
+*.swo
+*~
+.*.swp
+.*.swo
