@@ -17,6 +17,7 @@ return {
             input     = { enabled = true },
             picker    = { enabled = true },
             scroll    = { enabled = true },
+            notifier  = { enabled = true },
         },
         keys = {
             -- Picker
