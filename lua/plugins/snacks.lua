@@ -37,7 +37,19 @@ return {
             { "gd",         function() Snacks.picker.lsp_definitions() end,  desc = "goto definition" },
             { "gD",         function() Snacks.picker.lsp_declarations() end, desc = "goto declaration" },
             -- Git browse
-            { "<leader>bg", function() Snacks.gitbrowse() end,               desc = "Browse Git" }
+            { "<leader>bg", function() Snacks.gitbrowse() end,               desc = "Browse Git" },
+            {
+                "<leader>gy",
+                function()
+                    Snacks.gitbrowse({
+                        open = function(url)
+                            vim.fn.setreg("+", url)
+                        end,
+                        notify = false,
+                    })
+                end,
+                desc = "Git yank (url)"
+            },
         },
     },
     {

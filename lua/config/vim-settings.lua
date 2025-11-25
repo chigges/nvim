@@ -11,7 +11,7 @@ vim.opt.smartindent = true
 vim.opt.wrap = false
 
 vim.opt.swapfile = true
-vim.opt.directory = vim.fn.stdpath('data') .. '/swap//'
+vim.opt.directory = vim.fn.stdpath('data') .. '/swap//' -- Save swapfiles to ~/.local/share/nvim/swap
 
 vim.opt.backup = false
 
