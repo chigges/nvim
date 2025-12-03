@@ -78,6 +78,7 @@ vim.api.nvim_create_user_command(
 	{}
 ) -- Inserts boilerplate for a new C program
 
+-- OSC 52 support for sharing clipboard over ssh
 vim.g.clipboard = {
 	name = 'OSC 52',
 	copy = {
