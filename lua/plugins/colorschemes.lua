@@ -24,22 +24,36 @@ return {
     { "rose-pine/neovim", },
     {
         "sainnhe/gruvbox-material",  -- god tier
-        lazy = false,
-        priority = 1000,
-        config = function()
-            vim.cmd("colorscheme gruvbox-material")
-        end
     },
     { "rebelot/kanagawa.nvim", },
     {
         "neanias/everforest-nvim",
         version = false,
         config = function()
-            require("everforest").setup({
-                background = "soft"
-            })
+            if vim.o.background == "dark" then
+                require("everforest").setup({
+                    background = "hard"
+                })
+            else
+                require("everforest").setup({
+                    background = "soft"
+                })
+            end
+
+            vim.cmd("colorscheme everforest")
         end,
     },
+    -- {
+    --     "sainnhe/everforest",
+    --     version = false,
+    --     config = function()
+    --         if vim.o.background == "dark" then
+    --             vim.g.everforest_background = "hard"
+    --         else
+    --             vim.g.everforest_background = "soft"
+    --         end
+    --     end,
+    -- },
     { "EdenEast/nightfox.nvim" }, -- Nordfox variant is good. Basically a better nord
     { "catppuccin/nvim" }, -- good
     { "oahlen/iceberg.nvim" },
@@ -47,7 +61,9 @@ return {
     {
         "savq/melange-nvim", -- kinda like
     },
-    { "xero/miasma.nvim" }, -- not bad
+    {
+        "xero/miasma.nvim",
+    }, -- not bad
     { "srcery-colors/srcery-vim" },
     { "fenetikm/falcon" },
     { "embark-theme/vim" },
@@ -68,4 +84,6 @@ return {
     { "nordtheme/vim" },
     { "rakr/vim-one" },
     { "maxmx03/solarized.nvim" },
+    {"franbach/miramare"},
+    {"mhartington/oceanic-next",},
 }
