@@ -10,19 +10,15 @@ return {
                 rust = { "rustfmt", lsp_format = "fallback" },
                 -- Conform will run the first available formatter
                 javascript = { "prettierd", "prettier", stop_after_first = true },
+                cpp = { "clang-format", lsp_format="fallback" },
             },
         })
 
         local filetype = vim.bo.filetype
-        if filetype == "lua" then
-            -- Format current buffer on save
-            vim.api.nvim_create_autocmd('BufWritePre', {
-                pattern = "*",
-                callback = function(args)
-                    require("conform").format({ bufnr = args.buf })
-                end,
-            })
-        end
+        vim.api.nvim_create_autocmd("BufWritePre", {
+        pattern = "*.lua",
+        callback = function(args) require("conform").format({ bufnr = args.buf }) end,
+        })
 
         -- manual format keybind
         vim.keymap.set({ "n", "x" }, "<leader>fm", function()

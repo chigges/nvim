@@ -21,23 +21,23 @@ return {
         },
         keys = {
             -- Picker
-            { "<leader>ff", function() Snacks.picker.smart() end,            desc = "Smart find files" },
-            { "<leader>fg", function() Snacks.picker.git_files() end,        desc = "find git files" },
-            { "<leader>/",  function() Snacks.picker.grep() end,             desc = "grep" },
-            { "<leader>/",  function() Snacks.picker.grep_word() end,        desc = "grep visual",         mode = { "v" } },
-            { "<leader>sw", function() Snacks.picker.grep_word() end,        desc = "grep search word",    mode = { "n", "v" } },
-            { "<leader>gb", function() Snacks.picker.git_branches() end,     desc = "Git branches" },
-            { "<leader>sh", function() Snacks.picker.git_diff() end,         desc = "search git diff" },
-            { "<leader>sd", function() Snacks.picker.diagnostics() end,      desc = "search diagnostics" },
-            { "<leader>su", function() Snacks.picker.undo() end,             desc = "search undo history" },
-            { "<leader>sh", function() Snacks.picker.help() end,             desc = "search help pages" },
-            { "<leader>st", function() Snacks.picker.todo_comments() end,    desc = "search todo comments" },
-            { "<leader>cc", function() Snacks.picker.colorschemes() end,     desc = "colorschemes" },
+            { "<leader>ff",  function() Snacks.picker.smart() end,            desc = "Smart find files" },
+            { "<leader>fg",  function() Snacks.picker.git_files() end,        desc = "find git files" },
+            { "<leader>/",   function() Snacks.picker.grep() end,             desc = "grep" },
+            { "<leader>/",   function() Snacks.picker.grep_word() end,        desc = "grep visual",         mode = { "v" } },
+            { "<leader>sw",  function() Snacks.picker.grep_word() end,        desc = "grep search word",    mode = { "n", "v" } },
+            { "<leader>gb",  function() Snacks.picker.git_branches() end,     desc = "Git branches" },
+            { "<leader>sh",  function() Snacks.picker.git_diff() end,         desc = "search git diff" },
+            { "<leader>sd",  function() Snacks.picker.diagnostics() end,      desc = "search diagnostics" },
+            { "<leader>su",  function() Snacks.picker.undo() end,             desc = "search undo history" },
+            { "<leader>she", function() Snacks.picker.help() end,             desc = "search help pages" },
+            { "<leader>st",  function() Snacks.picker.todo_comments() end,    desc = "search todo comments" },
+            { "<leader>cc",  function() Snacks.picker.colorschemes() end,     desc = "colorschemes" },
             -- LSP
-            { "gd",         function() Snacks.picker.lsp_definitions() end,  desc = "goto definition" },
-            { "gD",         function() Snacks.picker.lsp_declarations() end, desc = "goto declaration" },
+            { "gd",          function() Snacks.picker.lsp_definitions() end,  desc = "goto definition" },
+            { "gD",          function() Snacks.picker.lsp_declarations() end, desc = "goto declaration" },
             -- Git browse
-            { "<leader>bg", function() Snacks.gitbrowse() end,               desc = "Browse Git" },
+            { "<leader>bg",  function() Snacks.gitbrowse() end,               desc = "Browse Git" },
             {
                 "<leader>gy",
                 function()

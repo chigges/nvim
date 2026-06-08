@@ -10,7 +10,7 @@ vim.opt.smartindent = true
 
 vim.opt.wrap = false
 
-vim.opt.swapfile = true
+vim.opt.swapfile = false
 vim.opt.directory = vim.fn.stdpath('data') .. '/swap//' -- Save swapfiles to ~/.local/share/nvim/swap
 
 vim.opt.backup = false
@@ -31,62 +31,60 @@ vim.opt.cursorline = true
 --vim.opt.lazyredraw = true
 vim.opt.updatetime = 50
 
-vim.opt.history = 50
-
 vim.opt.showcmd = true
 vim.opt.ruler = true
 
 vim.opt.confirm = true
 
 vim.api.nvim_create_autocmd("TextYankPost", {
-	callback = function()
-		vim.highlight.on_yank()
-	end,
+    callback = function()
+        vim.highlight.on_yank()
+    end,
 })
 
 -- ignore the default vim colorschemes when tab completing
 vim.opt.wildignore:append({
-	"blue.vim",
-	"darkblue.vim",
-	"delek.vim",
-	"desert.vim",
-	"elflord.vim",
-	"evening.vim",
-	"industry.vim",
-	"habamax.vim",
-	"koehler.vim",
-	"lunaperche.vim",
-	"morning.vim",
-	"murphy.vim",
-	"pablo.vim",
-	"peachpuff.vim",
-	"quiet.vim",
-	"ron.vim",
-	"shine.vim",
-	"slate.vim",
-	"sorbet.vim",
-	"retrobox.vim",
-	"torte.vim",
-	"wildcharm.vim",
-	"zaibatsu.vim",
-	"zellner.vim",
+    "blue.vim",
+    "darkblue.vim",
+    "delek.vim",
+    "desert.vim",
+    "elflord.vim",
+    "evening.vim",
+    "industry.vim",
+    "habamax.vim",
+    "koehler.vim",
+    "lunaperche.vim",
+    "morning.vim",
+    "murphy.vim",
+    "pablo.vim",
+    "peachpuff.vim",
+    "quiet.vim",
+    "ron.vim",
+    "shine.vim",
+    "slate.vim",
+    "sorbet.vim",
+    "retrobox.vim",
+    "torte.vim",
+    "wildcharm.vim",
+    "zaibatsu.vim",
+    "zellner.vim",
 })
 
 vim.api.nvim_create_user_command(
-	"Newc",
-	":normal i#include <stdio.h><CR>#include <stdlib.h><CR>#include <stdbool.h><CR>#include <string.h><CR>#include <assert.h><CR><CR>int main(int argc, char* argv[]) {<CR><CR><TAB>return EXIT_SUCCESS;<CR>}<CR>/* vim: set tabstop=4 shiftwidth=4 fileencoding=utf-8 noexpandtab: */<C-Up><C-Up><C-Up><tab>",
-	{}
+    "Newc",
+    ":normal i#include <stdio.h><CR>#include <stdlib.h><CR>#include <stdbool.h><CR>#include <string.h><CR>#include <assert.h><CR><CR>int main(int argc, char* argv[]) {<CR><CR><TAB>return EXIT_SUCCESS;<CR>}<CR>/* vim: set tabstop=4 shiftwidth=4 fileencoding=utf-8 noexpandtab: */<C-Up><C-Up><C-Up><tab>",
+    {}
 ) -- Inserts boilerplate for a new C program
 
 -- OSC 52 support for sharing clipboard over ssh
 vim.g.clipboard = {
-	name = 'OSC 52',
-	copy = {
-		['+'] = require('vim.ui.clipboard.osc52').copy('+'),
-		['*'] = require('vim.ui.clipboard.osc52').copy('*'),
-	},
-	paste = {
-		['+'] = require('vim.ui.clipboard.osc52').paste('+'),
-		['*'] = require('vim.ui.clipboard.osc52').paste('*'),
-	},
+    name = 'OSC 52',
+    copy = {
+        ['+'] = require('vim.ui.clipboard.osc52').copy('+'),
+        ['*'] = require('vim.ui.clipboard.osc52').copy('*'),
+    },
+    paste = {
+        ['+'] = require('vim.ui.clipboard.osc52').paste('+'),
+        ['*'] = require('vim.ui.clipboard.osc52').paste('*'),
+    },
 }

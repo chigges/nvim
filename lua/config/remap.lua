@@ -4,13 +4,13 @@ local remap = vim.keymap.set
 
 -- F keys
 
-remap("n", "<F1>", ":h ")       -- help on some function
-remap("n", "<F2>", ":tabe ")    -- open a file in a new tab
-remap("n", "<F3>", ":w<cr>")    -- save current file
-remap("n", "<F4>", ":q<cr>")    -- close current file
-remap("n", "<S-F4>", ":q!<cr>") -- close current file (without saving!)
-remap("n", "<F8>", ":noh<cr>")  -- stop highlight search
-remap("n", "<F11>", "!make")    -- run first make rule/target
+remap("n", "<F1>", ":h ")        -- help on some function
+remap("n", "<F2>", ":tabe ")     -- open a file in a new tab
+remap("n", "<F3>", ":w<cr>")     -- save current file
+remap("n", "<F4>", ":q<cr>")     -- close current file
+remap("n", "<S-F4>", ":q!<cr>")  -- close current file (without saving!)
+remap("n", "<F8>", ":noh<cr>")   -- stop highlight search
+remap("n", "<F11>", "!make<cr>") -- run first make rule/target
 
 
 -- Hacky way to run a simple C file
