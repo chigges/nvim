@@ -18,7 +18,6 @@ remap("n", "<F12>", ":w<cr>:!gcc -o placeholder % -lm && ./placeholder && rm -f 
 
 -- Quality of Life
 
-vim.g.mapleader = " " -- set leader key to space
 remap("n", ";", ":")  -- saves on pressing shift for :
 remap("n", "<C-k>", "<C-w>k", { desc = "move up a window" })
 remap("n", "<C-j>", "<C-w>j", { desc = "move down a window" })
